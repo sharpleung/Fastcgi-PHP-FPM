@@ -1,0 +1,3 @@
+/Users/gqleung/CLionProjects/fpm/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/gqleung/CLionProjects/fpm/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/gqleung/CLionProjects/fpm/cmake-build-debug/CMakeFiles/fpm.dir
